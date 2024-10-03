@@ -5,35 +5,14 @@ const nextConfig = {
   async rewrites() {
     return [
       {
-        source: "/rss.xml",
-        destination: "/feed/rss.xml",
+        source: "/blog",
+        destination: "myblog-xi-rouge.vercel.app/blog",
       },
       {
-        source: "/atom.xml",
-        destination: "/feed/atom.xml",
-      },
-      {
-        source: "/feed.json",
-        destination: "/feed/feed.json",
-      },
-      {
-        source: "/rss",
-        destination: "/feed/rss.xml",
-      },
-      {
-        source: "/feed",
-        destination: "/feed/rss.xml",
-      },
-      {
-        source: "/atom",
-        destination: "/feed/atom.xml",
-      },
-      {
-        source: "/json",
-        destination: "/feed/feed.json",
+        source: "/blog/:path*",
+        destination: "myblog-xi-rouge.vercel.app/blog/:path*",
       },
     ];
   },
-};
 
 module.exports = nextConfig;
